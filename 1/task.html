@@ -1,0 +1,16 @@
+<DOCTYPE html>
+<html ng-app="store">
+<head>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
+</head>
+<body>
+<div ng-controller="StoreConroller as store">
+	<img ng-src="{{store.item.image}}"  ng-click="store.item.num =store.item.num + 1"/>
+    <h2> count: {{store.item.num}} </h2>
+</div>
+<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
+
+ 

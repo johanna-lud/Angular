@@ -1,0 +1,27 @@
+<DOCTYPE html>
+<html ng-app="store">
+<head>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
+</head>
+<body ng-controller="StoreConroller as store">
+<ul class="nav nav-pills">
+<a href ng-click="value=0">  {{store.items[0].name}} </a>
+<a href ng-click="value=1">  {{store.items[1].name}} </a>
+<a href ng-click="value=2">  {{store.items[2].name}} </a>
+<a href ng-click="value=3">  {{store.items[3].name}} </a>
+<a href ng-click="value=4">  {{store.items[4].name}} </a>
+
+<div ng-repeat="item in store.items">
+<div ng-show="value===item.num-1">
+
+<img ng-src="{{store.items[value].image}}" ng-click="store.items[value].count =store.items[value].count + 1"/>
+{{store.items[value].count}}
+</div>
+</div>
+</ul>
+<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
+
+ 
