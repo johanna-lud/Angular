@@ -1,0 +1,21 @@
+<DOCTYPE html>
+<html ng-app="store">
+  <head>
+	<link rel="stylesheet" type="text/css" href="ang/bootstrap.min.css"/>
+  </head>
+  <body ng-controller="StoreConroller as store">
+    <ul class="nav nav-pills">
+    <div ng-repeat="item in store.items">
+	     <a href ng-click="show($index)">{{item.name}} </a>
+       <div ng-show="val===item.num">
+         <img ng-src="{{item.image}}" ng-click="num($index)"/>
+         <h2> count: {{item.count}} </h2>
+       </div>
+    </div>
+    </ul>
+  <script type="text/javascript" src="ang/angular.min.js"></script>
+  <script type="text/javascript" src="app_1.3.js"></script>
+  </body>
+</html>
+
+ 
